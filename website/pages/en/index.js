@@ -126,7 +126,6 @@ const FeatureCallout = props => (
   </div>
 );
 
-/*
 const LearnHow = props => (
   <Block background="light">
     {[
@@ -139,7 +138,6 @@ const LearnHow = props => (
     ]}
   </Block>
 );
-*/
 
 const TryOut = props => (
   <Block id="try">
