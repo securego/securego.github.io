@@ -79,7 +79,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('guidelines.html')}>Read our guidelines</Button>
+            <Button href={docUrl('rules/rule-intro.html')}>Read our guidelines</Button>
             <Button href="https://github.com/securego/gosec">Try out our tools</Button>
             <Button href="http://securego.herokuapp.com/">Join our community</Button>
           </PromoSection>
