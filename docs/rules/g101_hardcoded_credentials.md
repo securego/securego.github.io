@@ -3,8 +3,6 @@ id: g101
 title: G101: Hardcoded credentials
 ---
 
-# G101: Hardcoded credentials
-
 The use of hard-coded passwords increases the possibility of password guessing tremendously. This plugin test looks for all string literals and checks the following conditions:
 
 Variables are considered to look like a password if they have match any one of:
