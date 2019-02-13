@@ -3,8 +3,6 @@ id: g104
 title: G104: Audit errors not checked
 ---
 
-# G104: Audit errors not checked
-
 Really useful feature of Golang is the ability to return a tuple of a result and an error value from a function. There is an unspoken rule in Golang that the result of a function is unsafe until you make check the error value. Many security exploits can be performed when the error value is not checked.
 
 ## Example code:

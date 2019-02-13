@@ -3,8 +3,6 @@ id: g102
 title: G102: Bind to all interfaces
 ---
 
-# G102: Bind to all interfaces
-
 Binding to all network interfaces can potentially open up a service to traffic on unintended interfaces, that may not be properly documented or secured. This plugin test looks for a string pattern “0.0.0.0” that may indicate a hardcoded binding to all network interfaces.
 
 ## Example code:
