@@ -1,4 +1,9 @@
 {
   "docs": {
+      "Guidelines": [
+          "rules/intro",
+          "rules/g101",
+          "rules/g102"
+      ]
   }
 }
