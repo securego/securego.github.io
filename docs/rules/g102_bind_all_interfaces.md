@@ -1,6 +1,6 @@
 ---
 id: g102
-title: G104: Bind to all interfaces
+title: G102: Bind to all interfaces
 ---
 
 # G102: Bind to all interfaces
