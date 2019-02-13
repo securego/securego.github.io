@@ -1,7 +1,7 @@
 {
   "docs": {
       "Guidelines": [
-          "rules/intro",
+          "rules/rule-intro",
           "rules/g101",
           "rules/g102"
       ]
