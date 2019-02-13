@@ -7,7 +7,7 @@ title: G103: Use of unsafe block
 
 Using the unsafe package in Go gives you low-level memory management and many of the strength of the C language but also gives flexibility to the attacker of your application. The pointer arithmetic is one of the examples from the unsafe package which can be used for data leak, memory corruption or even execution of attackers own script.
 
-Also, you should keep in mind that the "unsafe" package is not protected by Go 1 compatibility guidelines.
+Also, you should keep in mind that the "unsafe" package is not protected by [Go 1 compatibility guidelines](https://golang.org/doc/go1compat).
 
 If you want to ignore this rule you can do it, as usual, using the "exclude" option in the command line interface.
 
