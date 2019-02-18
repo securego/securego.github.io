@@ -5,7 +5,8 @@
           "rules/g101",
           "rules/g102",
           "rules/g103",
-          "rules/g104"
+          "rules/g104",
+          "rules/g107"
       ]
   }
 }
