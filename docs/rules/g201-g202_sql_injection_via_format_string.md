@@ -1,12 +1,14 @@
 ---
-id: g201
-title: G201: SQL query construction using format string
+id: g201-g202
+title: G201/G202: SQL query construction using format string/string concatenation
 ---
 
 [SQL injection](https://en.wikipedia.org/wiki/SQL_injection) is one of the top security issues developers make and the consequences of this can be severe. 
 Using the format string function in the fmt Golang package to dynamically create an SQL query can easily create a possibility for SQL injection. The reason is that the format string function doesn't escape special characters like ' and it's easy to add second SQL command in the format string.
 
-## Example problematic code:
+## Examples of problematic code:
+
+### G201 - SQL query construction using format string
 
 ```
 package main
@@ -29,11 +31,42 @@ func main(){
 }
 ```
 
-## Gosec command line output
+The Gosec command line output:
 
 ```
 [examples/main.go:14] - G201: SQL string formatting (Confidence: HIGH, Severity: MEDIUM)
   > fmt.Sprintf("SELECT * FROM foo where name = '%s'", os.Args[1])
+```
+
+### G202 - SQL query construction using string concatenation
+
+```package main
+
+import (
+	"database/sql"
+)
+
+var staticQuery = "SELECT * FROM foo WHERE age < "
+
+func main() {
+	db, err := sql.Open("sqlite3", ":memory:")
+	if err != nil {
+		panic(err)
+	}
+	var gender string = "M"
+	rows, err := db.Query("SELECT * FROM foo WHERE gender = " + gender)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+}
+```
+
+The Gosec command line output:
+
+```
+[/Users/mvrachev/Martins/go/src/github.com/securego/securego.github.io/main.go:15] - G202: SQL string concatenation (Confidence: HIGH, Severity: MEDIUM)
+  > "SELECT * FROM foo WHERE gender = " + gender
 ```
 
 ## The right way
