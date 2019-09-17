@@ -33,10 +33,41 @@ func main() {
 }
 ```
 
+```
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+)
+
+var url string = "https://www.google.com"
+
+func main() {
+
+	resp, err := http.Get(url)
+	if err != nil {
+		panic(err)
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("%s", body)
+}
+```
+
 ## Gosec command line output
 
 ```
 [examples/main.go:12] - G107: Potential HTTP request made with variable url (Confidence: MEDIUM, Severity: MEDIUM)
+  > http.Get(url)
+```
+
+```
+[/Users/mvrachev/Martins/go/src/github.com/securego/examples/main.go:17] - G107: Potential HTTP request made with variable url (Confidence: MEDIUM, Severity: MEDIUM)
   > http.Get(url)
 ```
 
