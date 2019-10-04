@@ -7,13 +7,17 @@
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
-    "rename-version": "docusaurus-rename-version"
+    "rename-version": "docusaurus-rename-version",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "docusaurus": "^1.3.2"
   },
   "dependencies": {
     "i": "^0.3.6",
-    "npm": "^6.3.0"
-  }
+    "npm": "^6.3.0",
+    "snyk": "^1.230.5"
+  },
+  "snyk": true
 }
