@@ -3,10 +3,10 @@ id: g107
 title: G107: Url provided to HTTP request as taint input
 ---
 
-Getting an URL from an untrusted source like user input gives the ability of an attacker to redirect your application to bad websites and perform additional attacks.
+Getting a URL from an untrusted source like user input gives the ability of an attacker to redirect your application to bad websites and perform additional attacks.
 One of the examples is as shown below the [http.Get()](https://golang.org/pkg/net/http/#Client.Get) function issues a GET to the specified URL and if the result is appropriate GET will follow the redirect after calling Client's CheckRedirect function. That means that the attacker can send your application to various places.
 
-This problem can be used to achieve [SSRF](https://www.acunetix.com/blog/articles/server-side-request-forgery-vulnerability/) atttacks via http requests with variable url.
+This problem can be used to achieve [SSRF](https://www.acunetix.com/blog/articles/server-side-request-forgery-vulnerability/) attacks via http requests with variable url.
 
 ## Example problematic code:
 

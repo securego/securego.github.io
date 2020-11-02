@@ -3,7 +3,7 @@ id: g304
 title: G304: File path provided as taint input
 ---
 
-Trying to open a file provided as an input in a variable. The content of this variable might be controlled by an attacker who could change it to hold unauthorised file paths form the system.  In this way, it is possible to exfiltrate confidential information or such.
+Trying to open a file provided as an input in a variable. The content of this variable might be controlled by an attacker who could change it to hold unauthorised file paths from the system.  In this way, it is possible to exfiltrate confidential information or such.
 
 ## Example problematic code:
 
