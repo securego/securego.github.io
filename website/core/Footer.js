@@ -49,7 +49,7 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Stack Overflow
             </a>
-            <a href="http://securego.herokuapp.com/">Slack</a>
+            <a href="https://securego.slack.com/">Slack</a>
           </div>
           <div>
             <h5>More</h5>
