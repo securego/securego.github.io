@@ -34,7 +34,7 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('guidelines.html', this.props.language)}>
+            <a href={this.docUrl('rules/rule-intro.html', this.props.language)}>
               Secure development guidelines
             </a>
             <a href='https://godoc.org/github.com/securego/gosec'>
