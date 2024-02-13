@@ -34,7 +34,7 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('guidelines.html', this.props.language)}>
+            <a href={this.docUrl('rules/rule-intro.html', this.props.language)}>
               Secure development guidelines
             </a>
             <a href='https://godoc.org/github.com/securego/gosec'>
@@ -49,7 +49,7 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Stack Overflow
             </a>
-            <a href="http://securego.herokuapp.com/">Slack</a>
+            <a href="https://securego.slack.com/">Slack</a>
           </div>
           <div>
             <h5>More</h5>

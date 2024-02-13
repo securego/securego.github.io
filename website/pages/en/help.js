@@ -27,13 +27,13 @@ class Help extends React.Component {
     const supportLinks = [
       {
         content: `Learn more using the [guidelines on this site.](${docUrl(
-          'guidelines.html',
+          'rules/rule-intro.html',
           language
         )})`,
         title: 'Browse Docs',
       },
       {
-        content: 'Ask us questions on [Slack](http://securego.herokuapp.com/).',
+        content: 'Ask us questions on [Slack](https://securego.slack.com/).',
         title: 'Join the community',
       },
       {
